@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirKita - Web Edukasi Air Bersih & Sanitasi Sehat</title>
+  <meta name="description" content="Website edukasi sederhana tentang kualitas air bersih, cara cek kelayakan fisik dan pH, panduan sanitasi septic tank, serta solusi masalah air.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER & NAVIGASI RINGKAS (HANYA HTML & CSS)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#beranda" class="site-logo">
+        <span class="logo-icon">💧</span>
+        <div class="logo-text">
+          <span class="brand-title">AirKita</span>
+          <span class="brand-sub">Edukasi Air Bersih & Sanitasi</span>
+        </div>
+      </a>
+
+      <!-- 4 Menu Navigasi Ringkas Sesuai Permintaan -->
+      <nav class="main-navigation" aria-label="Menu Utama">
+        <a href="#beranda" class="nav-btn">Beranda</a>
+        <a href="#uji-air" class="nav-btn">Uji Kualitas Air</a>
+        <a href="#edukasi" class="nav-btn">Materi Edukasi</a>
+        <a href="#solusi-biaya" class="nav-btn">Solusi & Biaya</a>
+        <a href="#laporan-saran" class="nav-btn">Laporan & Saran</a>
+      </nav>
+
+      <a href="#kelola-data" class="btn-admin-shortcut">
+        ⚙️ Kelola Berkas Data
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. SECTION BERANDA (HERO EDUKASI SEDERHANA & RAMAH PEMULA)
+         ========================================================================= -->
+    <section class="hero-section" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="badge-tag">🌱 Web Edukasi Statis • Air Bersih & Sanitasi</span>
+          <h1 class="hero-title">
+            Belajar Mengenal <span class="text-gradient">Air Bersih</span> dan Sanitasi Sehat untuk Keluarga
+          </h1>
+          <p class="hero-lead">
+            Selamat datang di <strong>AirKita</strong>! Website edukasi ini dibuat untuk memudahkan kita memahami ciri-ciri air yang layak diminum, mengukur keasaman (pH) air, merawat septic tank, hingga menghitung kebutuhan air harian dengan panduan sederhana.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#uji-air" class="btn btn-primary">🧪 Pelajari Cek Kualitas Air</a>
+            <a href="#edukasi" class="btn btn-secondary">📖 Baca Materi Edukasi</a>
+          </div>
+
+          <div class="info-note-pill">
+            📌 <strong>Standar Acuan Resmi:</strong> Mengacu pada baku mutu <em>Permenkes RI No. 2 Tahun 2023</em> & standar WHO.
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image-card">
+            <img src="assets/hero_water.jpg" alt="Air Bersih Jernih" class="hero-visual">
+            <div class="image-caption-bubble">
+              <span class="bubble-icon">✨</span>
+              <span>Air jernih, bebas bau, tawar, dan ber-pH netral adalah hak setiap keluarga.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SECTION UJI KUALITAS AIR (FUNGSIONAL 1, 2, 3, 12)
+         ========================================================================= -->
+    <section class="content-section" id="uji-air">
+      <div class="container">
+        <div class="section-heading-center">
+          <span class="sub-label">Panduan Laboratorium Mandiri</span>
+          <h2>Uji Kualitas Fisik, Skala pH & Pemantauan Air</h2>
+          <p>Kenali ciri fisik air, pahami derajat keasaman (pH), dan gunakan lembar riwayat pemantauan berkala.</p>
+        </div>
+
+        <div class="cards-grid-2">
+          <!-- FUNGSIONAL 1: Cek Kelayakan Fisik Air (Warna, Bau, Rasa, Kekeruhan) & Rekomendasi -->
+          <div class="info-card">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 1</span>
+              <span class="pill-badge-outline">Uji Mandiri</span>
+            </div>
+            <h3>1. Cek Kelayakan Fisik Air & Rekomendasinya</h3>
+            <p class="card-intro">
+              Gunakan gelas kaca bening berlatar belakang kertas putih, lalu amati air Anda berdasarkan 4 parameter fisik berikut:
+            </p>
+
+            <div class="parameter-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Ciri Air yang Terlihat</th>
+                    <th>Status Kelayakan</th>
+                    <th>Rekomendasi Tindak Lanjut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1. Warna</strong></td>
+                    <td>Jernih bening tidak berwarna</td>
+                    <td><span class="tag-status tag-safe">Layak</span></td>
+                    <td>Bagus. Rebus hingga mendidih 100°C (3-5 menit) sebelum diminum.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>1. Warna</strong></td>
+                    <td>Kuning / Cokelat muda</td>
+                    <td><span class="tag-status tag-warn">Perlu Olah</span></td>
+                    <td>Ada zat organik/besi. Gunakan filter karbon aktif dan saringan sedimen.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>1. Warna</strong></td>
+                    <td>Cokelat lumpur / Kemerahan</td>
+                    <td><span class="tag-status tag-danger">Tidak Layak</span></td>
+                    <td>Besi tinggi atau tanah. Endapkan dengan tawas 50mg/L lalu lewatkan pasir silika.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Bau</strong></td>
+                    <td>Tidak berbau apa pun</td>
+                    <td><span class="tag-status tag-safe">Layak</span></td>
+                    <td>Kondisi ideal sesuai Permenkes. Simpan dalam wadah tertutup rapat.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Bau</strong></td>
+                    <td>Bau besi / karat / telur busuk</td>
+                    <td><span class="tag-status tag-danger">Tidak Layak</span></td>
+                    <td>Kandungan gas H2S / Fe. Lakukan aerasi semprotan terbuka dan filter karbon aktif.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Bau</strong></td>
+                    <td>Bau kaporit menyengat</td>
+                    <td><span class="tag-status tag-warn">Perlu Olah</span></td>
+                    <td>Endapkan air dalam ember terbuka selama 1-2 jam agar gas klorin menguap.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3. Rasa</strong></td>
+                    <td>Tawar segar (bebas rasa aneh)</td>
+                    <td><span class="tag-status tag-safe">Layak</span></td>
+                    <td>Air aman untuk dimasak dan dikonsumsi sehari-hari.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3. Rasa</strong></td>
+                    <td>Asin / Asam / Pahit kesat</td>
+                    <td><span class="tag-status tag-danger">Tidak Layak</span></td>
+                    <td>Asin = intrusi air laut; Pahit = kesadahan kapur tinggi. Perlu filter resin / RO.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4. Kekeruhan</strong></td>
+                    <td>Bening tanpa butiran melayang</td>
+                    <td><span class="tag-status tag-safe">Layak</span></td>
+                    <td>Kekeruhan rendah di bawah batas 5 NTU. Aman.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4. Kekeruhan</strong></td>
+                    <td>Keruh / Butek / Mengendap</td>
+                    <td><span class="tag-status tag-warn">Perlu Olah</span></td>
+                    <td>Pasang saringan sedimen spun 5 mikron dan kain kasa saring bertingkat.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="summary-box-green mt-3">
+              💡 <strong>Rangkuman Aturan Emas:</strong> Air yang layak diminum <strong>wajib lolos 4 kriteria:</strong> Jernih warnanya, Tidak Berbau, Tawar rasanya, dan Tidak Keruh!
+            </div>
+          </div>
+
+          <!-- FUNGSIONAL 2: Cek pH Air & Spektrum Kategori (Asam, Netral, Basa) -->
+          <div class="info-card">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 2</span>
+              <span class="pill-badge-outline">Skala pH</span>
+            </div>
+            <h3>2. Cek Derajat Keasaman (pH) Air & Kategorinya</h3>
+            <p class="card-intro">
+              Skala pH berkisar dari <strong>0 hingga 14</strong>. Baku mutu resmi air minum menurut Permenkes RI No. 2 Tahun 2023 adalah <strong>pH 6.5 – 8.5</strong>.
+            </p>
+
+            <!-- Visual Bar Spektrum pH Menggunakan Pure CSS -->
+            <div class="ph-visual-bar-wrap">
+              <div class="ph-color-spectrum">
+                <span class="ph-mark ph-0">0</span>
+                <span class="ph-mark ph-3">3</span>
+                <span class="ph-mark ph-6">6.5</span>
+                <span class="ph-mark ph-7">7.0</span>
+                <span class="ph-mark ph-8">8.5</span>
+                <span class="ph-mark ph-11">11</span>
+                <span class="ph-mark ph-14">14</span>
+              </div>
+              <div class="spectrum-labels">
+                <span class="lbl-asam">🔴 Asam (0 – 6.4)</span>
+                <span class="lbl-netral">🟢 Netral Aman (6.5 – 8.5)</span>
+                <span class="lbl-basa">🔵 Basa (8.6 – 14)</span>
+              </div>
+            </div>
+
+            <!-- Tiga Kategori Penjelasan pH Lengkap -->
+            <div class="ph-categories-list">
+              <div class="ph-card acid-card">
+                <div class="ph-card-header">
+                  <span class="ph-dot dot-red"></span>
+                  <strong>1. Kategori Asam (pH &lt; 6.5)</strong>
+                </div>
+                <p><strong>Ciri & Rasa:</strong> Terasa agak masam/kesat. Sering ditemukan di daerah rawa gambut atau air hujan asam.</p>
+                <p><strong>Dampak:</strong> Bersifat korosif mengikis pipa besi/tembaga hingga berkarat, serta kurang baik untuk lambung.</p>
+                <div class="ph-sol">🛠️ <em>Solusi:</em> Tambahkan aerasi pancuran udara atau saring melewati batu kapur (kalsium karbonat).</div>
+              </div>
+
+              <div class="ph-card neutral-card">
+                <div class="ph-card-header">
+                  <span class="ph-dot dot-green"></span>
+                  <strong>2. Kategori Netral (pH 6.5 – 8.5) [STANDAR RESMI]</strong>
+                </div>
+                <p><strong>Ciri & Rasa:</strong> Segar, tawar, tidak berasa asam maupun licin. Sangat ramah bagi pencernaan manusia.</p>
+                <p><strong>Dampak:</strong> Tidak merusak pipa, menjaga keseimbangan cairan tubuh, ideal untuk diminum dan memasak.</p>
+                <div class="ph-sol">✅ <em>Saran:</em> Kondisi sudah sempurna. Cukup rebus mendidih 100°C sebelum dikonsumsi!</div>
+              </div>
+
+              <div class="ph-card alkaline-card">
+                <div class="ph-card-header">
+                  <span class="ph-dot dot-blue"></span>
+                  <strong>3. Kategori Basa / Alkali Tinggi (pH &gt; 8.5)</strong>
+                </div>
+                <p><strong>Ciri & Rasa:</strong> Terasa sedikit licin di kulit seperti air sabun encer dan terasa pahit di lidah.</p>
+                <p><strong>Dampak:</strong> Mempercepat penumpukan kerak kapur putih tebal di pipa, ketel pemanas, dan dinding toren.</p>
+                <div class="ph-sol">🛠️ <em>Solusi:</em> Gunakan saringan resin kation penukar ion untuk menurunkan kesadahan air.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUNGSIONAL 3: Pemeriksaan Kualitas Air & Saran Tindak Lanjut -->
+        <div class="info-card mt-4">
+          <div class="card-badge-row">
+            <span class="pill-badge">Fungsional 3</span>
+            <span class="pill-badge-outline">Panduan Tindak Lanjut</span>
+          </div>
+          <h3>3. Alur Pemeriksaan Kualitas Air & Saran Tindak Lanjut</h3>
+          <p class="card-intro">
+            Gunakan panduan alur 3 langkah ini jika Anda ingin memeriksa sumber air baru di rumah atau lingkungan:
+          </p>
+
+          <div class="flow-steps-grid">
+            <div class="flow-step-box">
+              <div class="step-badge-circle">Langkah 1</div>
+              <h4>Inspeksi Sumber Air</h4>
+              <p>Periksa jarak antara bibir sumur Anda dengan sumber pencemar (septic tank, kandang ternak, tempat sampah). Pastikan jaraknya <strong>minimal 10 hingga 15 meter</strong>.</p>
+            </div>
+
+            <div class="flow-step-box">
+              <div class="step-badge-circle">Langkah 2</div>
+              <h4>Uji Fisik & pH Mandiri</h4>
+              <p>Ambil sampel air dalam botol bening. Amati apakah jernih, cium baunya, dan gunakan kertas lakmus / indikator universal untuk memastikan pH berada di antara <strong>6.5 – 8.5</strong>.</p>
+            </div>
+
+            <div class="flow-step-box">
+              <div class="step-badge-circle">Langkah 3</div>
+              <h4>Tindak Lanjut & Sterilisasi</h4>
+              <p>Bila air keruh, pasang <em>filter pasir & arang</em>. Bila berbau, lakukan <em>aerasi</em>. Sebelum diminum, <strong>wajib selalu merebus air hingga mendidih 100°C</strong> selama 3–5 menit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUNGSIONAL 12: Menyimpan Riwayat Hasil Pengecekan (Format Catatan Pemantauan) -->
+        <div class="info-card mt-4" id="riwayat-air">
+          <div class="card-badge-row">
+            <span class="pill-badge">Fungsional 12</span>
+            <span class="pill-badge-outline">Pemantauan Berkala</span>
+          </div>
+          <div class="card-head-flex">
+            <div>
+              <h3>Lembar Riwayat Pemantauan Kualitas Air Berkala</h3>
+              <p class="card-intro">
+                Sesuai Fungsional 12, kondisi air perlu dipantau dari waktu ke waktu. Tabel di bawah ini adalah format resmi riwayat pemantauan yang dapat Anda simpan atau cetak untuk mencatat kondisi air keluarga setiap bulan:
+              </p>
+            </div>
+            <button class="btn btn-secondary btn-sm print-hide" onclick="window.print()">🖨️ Cetak Lembar Riwayat</button>
+          </div>
+
+          <div class="parameter-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Tanggal Pantau</th>
+                  <th>Sumber Air</th>
+                  <th>Warna & Bau</th>
+                  <th>Nilai pH</th>
+                  <th>Status Kelayakan</th>
+                  <th>Rekomendasi Tindakan</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>27 Oktober 2026</td>
+                  <td>Sumur Bor Rumah</td>
+                  <td>Jernih, Bebas Bau</td>
+                  <td>7.2 (Netral)</td>
+                  <td><span class="tag-status tag-safe">Layak Minum</span></td>
+                  <td>Rebus hingga 100°C sebelum diminum</td>
+                  <td>Kondisi prima</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>15 Oktober 2026</td>
+                  <td>PDAM Perpipaan</td>
+                  <td>Jernih, Bau Kaporit Ringan</td>
+                  <td>7.5 (Netral)</td>
+                  <td><span class="tag-status tag-safe">Layak</span></td>
+                  <td>Diamkan 1 jam di wadah terbuka sebelum dimasak</td>
+                  <td>Kaporit hilang alami</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>02 Oktober 2026</td>
+                  <td>Sumur Gali Tradisional</td>
+                  <td>Kekuningan, Bau Tanah</td>
+                  <td>6.2 (Agak Asam)</td>
+                  <td><span class="tag-status tag-warn">Perlu Olah</span></td>
+                  <td>Kuras sumur, ganti media arang filter</td>
+                  <td>Pasca hujan deras</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><em>Catatan Baru</em></td>
+                  <td><em>Sumur / PDAM Anda</em></td>
+                  <td><em>Isi hasil amatan</em></td>
+                  <td><em>Isi angka pH</em></td>
+                  <td><em>Layak / Waspada</em></td>
+                  <td><em>Tindakan yang dilakukan</em></td>
+                  <td><em>Paraf / Status</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-hint">
+            💡 <em>Tips untuk Pemula:</em> Catat kondisi air Anda minimal satu kali setiap bulan agar perubahan kualitas air tanah pasca musim hujan atau kemarau dapat langsung diantisipasi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SECTION MATERI EDUKASI (FUNGSIONAL 4, 5, 6, 7)
+         ========================================================================= -->
+    <section class="content-section bg-light" id="edukasi">
+      <div class="container">
+        <div class="section-heading-center">
+          <span class="sub-label">Ensiklopedia Pengetahuan</span>
+          <h2>Materi Edukasi Air & Sanitasi Terpadu</h2>
+          <p>Pelajari 4 topik penting: menjaga kebersihan sumber air, mengatasi masalah air rumah tangga, mengelola limbah/septic tank, serta mewaspadai penyakit air.</p>
+        </div>
+
+        <!-- FUNGSIONAL 4: Tips Menjaga Kebersihan Air dan Sumber Air -->
+        <div class="edu-module-block">
+          <div class="module-title-bar">
+            <span class="pill-badge">Fungsional 4</span>
+            <h3>💧 4 Tips Utama Menjaga Kebersihan Air & Perlindungan Sumber Air</h3>
+          </div>
+
+          <div class="cards-grid-4">
+            <div class="tip-box">
+              <div class="tip-icon">🏡</div>
+              <h4>1. Jarak Aman 10 – 15 Meter</h4>
+              <p>Pastikan bibir sumur air minum berjarak minimal 10–15 meter dari septic tank, tempat sampah, atau kandang hewan agar bakteri coliform tidak merembes.</p>
+            </div>
+
+            <div class="tip-box">
+              <div class="tip-icon">🚰</div>
+              <h4>2. Kuras Toren Tiap 3 – 6 Bulan</h4>
+              <p>Dasar tandon/toren penampungan air sering menumpuk endapan debu, lumpur halus, dan lumut. Kuras secara berkala tanpa menggunakan bahan kimia beracun.</p>
+            </div>
+
+            <div class="tip-box">
+              <div class="tip-icon">🔥</div>
+              <h4>3. Rebus Air Hingga Mendidih 100°C</h4>
+              <p>Mendidihkan air hingga muncul gelembung bergolak selama 3–5 menit adalah cara alami paling ampuh membunuh 99.9% bakteri patogen penyebab diare.</p>
+            </div>
+
+            <div class="tip-box">
+              <div class="tip-icon">🌿</div>
+              <h4>4. Buat Lubang Biopori & Resapan</h4>
+              <p>Lubang biopori di halaman membantu meresapkan air hujan ke dalam tanah, menjaga ketersediaan air sumur saat kemarau, dan mencegah banjir.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUNGSIONAL 5: Panduan Mengatasi Masalah Air (Keruh, Berbau, Debit Kecil) -->
+        <div class="edu-module-block mt-5" id="masalah-air">
+          <div class="module-title-bar">
+            <span class="pill-badge">Fungsional 5</span>
+            <h3>🛠️ Panduan Mengatasi 3 Masalah Utama Air Rumah Tangga</h3>
+          </div>
+
+          <div class="cards-grid-3">
+            <!-- Masalah 1: Air Keruh -->
+            <div class="problem-card">
+              <div class="problem-header header-keruh">
+                <span class="prob-tag">Masalah 1</span>
+                <h4>Air Keruh / Berlumpur</h4>
+              </div>
+              <div class="problem-body">
+                <p><strong>Penyebab:</strong> Erosi tanah saat hujan lebat, sumur terlalu dangkal, atau saringan pompa jebol.</p>
+                <div class="sol-group">
+                  <strong>Cara Mengatasi:</strong>
+                  <ul>
+                    <li>Endapkan air dalam bak penampung pertama selama 2–4 jam.</li>
+                    <li>Gunakan tawas (Aluminium Sulfat) dosis 50 mg per liter air untuk mengikat lumpur.</li>
+                    <li>Lewatkan air melalui saringan pasir silika dan kain filter sedimen.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Masalah 2: Air Berbau -->
+            <div class="problem-card">
+              <div class="problem-header header-bau">
+                <span class="prob-tag">Masalah 2</span>
+                <h4>Air Berbau Besi / Telur Busuk</h4>
+              </div>
+              <div class="problem-body">
+                <p><strong>Penyebab:</strong> Kadar zat besi (Fe), mangan, atau gas hidrogen sulfida (H2S) yang tinggi di dalam tanah.</p>
+                <div class="sol-group">
+                  <strong>Cara Mengatasi:</strong>
+                  <ul>
+                    <li><strong>Aerasi:</strong> Semburkan air lewat pipa pancuran terbuka agar zat besi mengendap.</li>
+                    <li>Gunakan media <strong>Karbon Aktif Granular (Arang Batok Kelapa)</strong> untuk menyerap bau amis dan kaporit.</li>
+                    <li>Tambahkan media pasir mangan (zeolit) untuk menyaring karat besi.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Masalah 3: Debit Air Kecil -->
+            <div class="problem-card">
+              <div class="problem-header header-debit">
+                <span class="prob-tag">Masalah 3</span>
+                <h4>Debit Air Kecil / Mampet</h4>
+              </div>
+              <div class="problem-body">
+                <p><strong>Penyebab:</strong> Kerak kapur menyumbat moncong kran pipa, muka air sumur turun saat kemarau, atau pompa aus.</p>
+                <div class="sol-group">
+                  <strong>Cara Mengatasi:</strong>
+                  <ul>
+                    <li>Bongkar ujung saringan moncong kran, rendam dalam larutan cuka hangat untuk rontokkan kerak putih.</li>
+                    <li>Cek kebocoran pipa bawah tanah dengan menutup semua kran dan melihat meteran air.</li>
+                    <li>Tinggikan posisi toren air untuk memperbesar tekanan gravitasi alami.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUNGSIONAL 6: Edukasi Sanitasi & Pengelolaan Limbah (Septic Tank, Deterjen, Minyak Bekas) -->
+        <div class="edu-module-block mt-5" id="sanitasi">
+          <div class="module-title-bar">
+            <span class="pill-badge">Fungsional 6</span>
+            <h3>🚽 Edukasi Sanitasi & Pengelolaan 3 Jenis Limbah Rumah Tangga</h3>
+          </div>
+
+          <div class="cards-grid-3">
+            <!-- 1. Septic Tank -->
+            <div class="sanitation-card">
+              <div class="san-header">
+                <span class="san-icon">🚽</span>
+                <h4>1. Standar Septic Tank SNI</h4>
+              </div>
+              <p class="san-desc">
+                Septic tank bukan sekadar kubangan tanah terbuka. Standar SNI 03-2398-2002 mensyaratkan:
+              </p>
+              <ul class="san-list">
+                <li>Dinding dan lantai <strong>wajib kedap air</strong> (cor beton atau fiberglass) agar bakteri tinja tidak merembes ke air tanah.</li>
+                <li>Wajib punya 2 ruang: ruang pengurai lumpur dan ruang resapan.</li>
+                <li>Jarak ke sumur minimal <strong>10 meter (tanah lempung)</strong> atau <strong>15 meter (tanah pasir)</strong>.</li>
+                <li>Lakukan penyedotan lumpur tinja rutin setiap 2–3 tahun sekali.</li>
+              </ul>
+            </div>
+
+            <!-- 2. Deterjen / Greywater -->
+            <div class="sanitation-card">
+              <div class="san-header">
+                <span class="san-icon">🫧</span>
+                <h4>2. Limbah Deterjen & Greywater</h4>
+              </div>
+              <p class="san-desc">
+                Air bekas cucian piring dan pakaian (greywater) mengandung zat surfaktan dan fosfat yang berbahaya:
+              </p>
+              <ul class="san-list">
+                <li>Jangan buang air cucian langsung ke dekat sumur atau selokan terbuka karena memicu bau comberan dan membunuh mikroba tanah.</li>
+                <li>Gunakan deterjen ramah lingkungan yang bebas fosfat (<em>Phosphate-Free</em>).</li>
+                <li>Buat bak taman sanita (selokan kerikil dengan tanaman air melati air / typha) untuk menyaring busa deterjen secara alami.</li>
+              </ul>
+            </div>
+
+            <!-- 3. Minyak Bekas / Jelantah -->
+            <div class="sanitation-card">
+              <div class="san-header">
+                <span class="san-icon">🛢️</span>
+                <h4>3. Bahaya Minyak Jelantah & 'Fatberg'</h4>
+              </div>
+              <p class="san-desc">
+                Satu liter minyak jelantah dapat mencemari hingga satu juta liter air tanah:
+              </p>
+              <ul class="san-list">
+                <li><strong>Jangan buang minyak ke wastafel atau kloset!</strong> Minyak akan membeku dan menyatu dengan kalsium sabun membentuk batu lemak raksasa (<em>fatberg</em>) yang menyumbat total pipa saluran pembuangan.</li>
+                <li>Tampung minyak bekas di botol atau jeriken bekas.</li>
+                <li>Setorkan ke Bank Sampah atau pengumpul jelantah untuk didaur ulang menjadi biodiesel ramah lingkungan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FUNGSIONAL 7: Informasi Kesehatan Terkait Penyakit Akibat Air Tercemar -->
+        <div class="edu-module-block mt-5" id="penyakit-air">
+          <div class="module-title-bar">
+            <span class="pill-badge">Fungsional 7</span>
+            <h3>🩺 Informasi Kesehatan & Penyakit Akibat Air Tercemar</h3>
+          </div>
+
+          <p class="card-intro">
+            Air yang terkontaminasi bakteri atau zat kimia dapat memicu berbagai penyakit berbahaya (<em>waterborne diseases</em>):
+          </p>
+
+          <div class="cards-grid-4">
+            <div class="disease-box">
+              <span class="disease-tag tag-bakteri">Bakterial</span>
+              <h4>Diare & Kolera</h4>
+              <p class="dis-text"><strong>Gejala:</strong> Buang air besar cair terus menerus, mual, lemas, dan dehidrasi cepat.</p>
+              <div class="dis-cure"><strong>Pencegahan:</strong> Minum air matang 100°C dan cuci tangan pakai sabun sebelum makan. Berikan oralit segera bila diare.</div>
+            </div>
+
+            <div class="disease-box">
+              <span class="disease-tag tag-bakteri">Bakterial</span>
+              <h4>Demam Tifoid (Tipes)</h4>
+              <p class="dis-text"><strong>Gejala:</strong> Demam tinggi terutama sore dan malam hari, lidah putih kotor, lemas dan sakit perut.</p>
+              <div class="dis-cure"><strong>Pencegahan:</strong> Hindari es batu dari air mentah, pastikan alat makan bersih, dan jaga kebersihan sumber air minum.</div>
+            </div>
+
+            <div class="disease-box">
+              <span class="disease-tag tag-zoonosis">Urin Tikus</span>
+              <h4>Leptospirosis</h4>
+              <p class="dis-text"><strong>Gejala:</strong> Demam tinggi mendadak pasca banjir, mata merah tanpa kotoran, dan nyeri hebat pada betis.</p>
+              <div class="dis-cure"><strong>Pencegahan:</strong> Gunakan sepatu bot karet saat membersihkan selokan atau banjir, dan obati luka terbuka segera.</div>
+            </div>
+
+            <div class="disease-box">
+              <span class="disease-tag tag-virus">Viral</span>
+              <h4>Hepatitis A & Kulit</h4>
+              <p class="dis-text"><strong>Gejala:</strong> Badan letih, air kencing pekat seperti teh tua, mata menguning, atau kulit gatal bentol.</p>
+              <div class="dis-cure"><strong>Pencegahan:</strong> Gunakan air bersih berstandar untuk mandi, jangan gunakan air sumur berbusa atau berbau busuk.</div>
+            </div>
+          </div>
+
+          <div class="emergency-alert-card mt-3">
+            ⚠️ <strong>Peringatan Kesehatan:</strong> Bila ada anggota keluarga yang mengalami diare hebat disertai mata cekung, kulit tidak elastis saat dicubit, atau muntah tiada henti, <strong>segera bawa ke Puskesmas atau dokter terdekat</strong> untuk mencegah dehidrasi berat!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SECTION SOLUSI & BIAYA (FUNGSIONAL 8 & 10)
+         ========================================================================= -->
+    <section class="content-section" id="solusi-biaya">
+      <div class="container">
+        <div class="section-heading-center">
+          <span class="sub-label">Solusi Nyata & Panduan Keuangan</span>
+          <h2>Teknologi Saringan Air & Estimasi Biaya Kebutuhan</h2>
+          <p>Pelajari cara membuat filter air bertingkat sendiri di rumah serta panduan hitung belanja air keluarga.</p>
+        </div>
+
+        <div class="cards-grid-2">
+          <!-- FUNGSIONAL 8: Solusi Penyaringan Air & Kampanye Lingkungan -->
+          <div class="info-card">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 8</span>
+              <span class="pill-badge-outline">Teknologi Sederhana</span>
+            </div>
+            <h3>1. Solusi Saringan Air Bertingkat & Kampanye Kebersihan</h3>
+            <p class="card-intro">
+              Bila air di rumah agak keruh atau berbau, Anda dapat membuat tabung saringan mandiri menggunakan bahan-bahan lokal dengan susunan berjenjang berikut:
+            </p>
+
+            <div class="filter-schematic-wrap">
+              <img src="assets/filter_diagram.jpg" alt="Skema 5 Tingkat Saringan Air" class="filter-diagram-image">
+              <div class="schematic-caption">
+                <strong>Prinsip Kerja Saringan 4 Lapisan:</strong>
+              </div>
+            </div>
+
+            <div class="filter-steps-list">
+              <div class="step-line">
+                <span class="num-circle">1</span>
+                <div>
+                  <strong>Lapisan 1 (Atas): Pasir Silika / Pasir Halus</strong>
+                  <p>Berfungsi menyaring kotoran fisik, lumpur halus, dan partikel debu yang melayang di air.</p>
+                </div>
+              </div>
+              <div class="step-line">
+                <span class="num-circle">2</span>
+                <div>
+                  <strong>Lapisan 2: Karbon Aktif (Arang Batok Kelapa)</strong>
+                  <p>Berfungsi menyerap bau karat, bau amis, sisa pestisida, rasa aneh, dan warna kekuningan.</p>
+                </div>
+              </div>
+              <div class="step-line">
+                <span class="num-circle">3</span>
+                <div>
+                  <strong>Lapisan 3: Kerikil Bersih & Spons Saring</strong>
+                  <p>Berfungsi sebagai alas penahan aliran air agar media arang dan pasir tidak ikut larut keluar.</p>
+                </div>
+              </div>
+              <div class="step-line">
+                <span class="num-circle">4</span>
+                <div>
+                  <strong>Metode Darurat SODIS (Solar Disinfection)</strong>
+                  <p>Masukkan air jernih ke botol plastik bening, lalu jemur di bawah terik sinar matahari selama 6 jam. Sinar UV matahari akan mensterilkan kuman secara alami.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kampanye Kebersihan Lingkungan -->
+            <div class="campaign-summary-box mt-3">
+              <h4>🌱 Kampanye Sanitasi Nasional (STBM 5 Pilar):</h4>
+              <p>Membiasakan Stop Buang Air Besar Sembarangan, Cuci Tangan Pakai Sabun, Pengelolaan Air Minum dan Makanan Rumah Tangga, Pengelolaan Sampah, dan Pengelolaan Limbah Cair Rumah Tangga.</p>
+            </div>
+          </div>
+
+          <!-- FUNGSIONAL 10: Estimasi Biaya Kebutuhan Air (Air Galon & Tambahan Saat Kemarau) -->
+          <div class="info-card" id="biaya-air">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 10</span>
+              <span class="pill-badge-outline">Kalkulator Finansial</span>
+            </div>
+            <h3>2. Estimasi Biaya Kebutuhan Air Keluarga (Normal vs Kemarau)</h3>
+            <p class="card-intro">
+              Sesuai Fungsional 10, berikut adalah panduan simulasi belanja air minum galon harian dan lonjakan biaya saat musim kemarau untuk keluarga beranggotakan 4 orang:
+            </p>
+
+            <div class="cost-summary-card">
+              <div class="cost-header-row">
+                <span>Rata-rata Pengeluaran Air Minum Galon:</span>
+                <span class="cost-big">Rp 288.000 / bulan</span>
+              </div>
+              <p class="cost-subtext">Perhitungan: 3.5 galon per minggu &times; Rp 19.000 per galon &times; 4.33 minggu.</p>
+
+              <div class="cost-table-wrap">
+                <table class="cost-table">
+                  <thead>
+                    <tr>
+                      <th>Komponen Kebutuhan Air</th>
+                      <th>Pemakaian Rata-rata</th>
+                      <th>Estimasi Biaya</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Air Galon Harian (1 Tahun)</td>
+                      <td>~15 galon / bulan &times; 12 bulan</td>
+                      <td>Rp 3.456.000 / tahun</td>
+                    </tr>
+                    <tr class="row-kemarau">
+                      <td><strong>Tambahan Saat Musim Kemarau</strong><br><small>(Beli air tangki 5.000L saat sumur mengering)</small></td>
+                      <td>2 tangki / bulan selama 3 bulan kemarau</td>
+                      <td><strong>+ Rp 1.680.000</strong><br><small>(@ Rp 280.000 / tangki)</small></td>
+                    </tr>
+                    <tr class="row-total">
+                      <td><strong>TOTAL PENGELUARAN AIR PER TAHUN</strong></td>
+                      <td>Air minum + Tambahan kemarau</td>
+                      <td><strong>Rp 5.136.000 / tahun</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Analisis Penghematan Finansial -->
+              <div class="savings-highlight-box mt-3">
+                <h4>💰 Tips Cerdas Menghemat Biaya Air:</h4>
+                <p>
+                  Bila keluarga Anda berinvestasi memasang <strong>tabung filter air mandiri</strong> (biaya sekitar Rp 1.500.000 satu kali beli + ganti media Rp 300.000 per tahun), Anda bisa <strong>menghemat belanja air hingga lebih dari Rp 3.000.000 setiap tahunnya</strong>!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SECTION LAPORAN & SARAN (FUNGSIONAL 9, 11, 13)
+         ========================================================================= -->
+    <section class="content-section bg-light" id="laporan-saran">
+      <div class="container">
+        <div class="section-heading-center">
+          <span class="sub-label">Partisipasi & Kebijakan</span>
+          <h2>Laporan Masalah Air, Saran Pemerintah & Pengelola</h2>
+          <p>Kirimkan laporan gangguan air tanpa registrasi akun, serta lihat saran aksi bagi pemerintah dan masyarakat.</p>
+        </div>
+
+        <div class="cards-grid-2">
+          <!-- FUNGSIONAL 9: Pengguna Mengirim Laporan Masalah Air/Sanitasi dan Saran -->
+          <div class="info-card">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 9</span>
+              <span class="pill-badge-outline">Privasi Terjaga Tanpa Akun</span>
+            </div>
+            <h3>1. Formulir Laporan Masalah Air & Saran Warga</h3>
+            <p class="card-intro">
+              Ada air keruh, saluran mampet, pipa bocor, atau septic tank meluap di lingkungan Anda? Sampaikan laporan Anda di formulir ini:
+            </p>
+
+            <form class="report-form-layout" action="#laporan-terkirim" method="GET">
+              <div class="form-group-item">
+                <label for="namaPelapor">Nama Anda (atau Nama Panggilan):</label>
+                <input type="text" id="namaPelapor" name="nama" class="form-control" placeholder="Contoh: Pak Budi / Warga RT 02" required>
+                <small class="form-help">Tidak meminta NIK atau data pribadi sensitif (Aman & Terlindungi).</small>
+              </div>
+
+              <div class="form-group-item">
+                <label for="lokasiPelapor">Wilayah / Lokasi Kejadian:</label>
+                <input type="text" id="lokasiPelapor" name="lokasi" class="form-control" placeholder="Contoh: RT 03 / RW 05, Desa Sukamaju" required>
+              </div>
+
+              <div class="form-group-item">
+                <label for="jenisMasalah">Jenis Masalah Air / Sanitasi:</label>
+                <select id="jenisMasalah" name="jenis" class="form-control">
+                  <option value="keruh">Air Keruh & Berbau Besi / Lumpur</option>
+                  <option value="macet">Aliran Air PDAM / Sumur Mati Total</option>
+                  <option value="septic">Septic Tank Meluap / Rembes ke Parit</option>
+                  <option value="minyak">Limbah Minyak / Deterjen Menyumbat Selokan</option>
+                  <option value="kemarau">Kekeringan Parah & Butuh Mobil Tangki</option>
+                  <option value="pipa">Pipa Bocor di Jalan Umum</option>
+                </select>
+              </div>
+
+              <div class="form-group-item">
+                <label for="urgensi">Tingkat Urgensi Masalah:</label>
+                <select id="urgensi" name="urgensi" class="form-control">
+                  <option value="sedang">Sedang (Bisa ditangani dalam 2-3 hari)</option>
+                  <option value="tinggi">Tinggi (Kebutuhan masak & mandi terganggu)</option>
+                  <option value="mendesak">Mendesak / Darurat (Air tercemar parah / banjir limbah)</option>
+                </select>
+              </div>
+
+              <div class="form-group-item">
+                <label for="deskripsi">Ceritakan Masalah Secara Singkat:</label>
+                <textarea id="deskripsi" name="deskripsi" rows="3" class="form-control" placeholder="Jelaskan sejak kapan terjadi dan berapa banyak warga yang terdampak..." required></textarea>
+              </div>
+
+              <div class="form-group-item">
+                <label for="saranWarga">Saran / Usulan Solusi dari Anda (Opsional):</label>
+                <textarea id="saranWarga" name="saran" rows="2" class="form-control" placeholder="Contoh: Mohon diadakan bantuan air tangki atau perbaikan gorong-gorong..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                ✉️ Kirim Laporan & Saran Masalah Air
+              </button>
+            </form>
+
+            <!-- Tabel Contoh Papan Laporan Warga yang Masuk -->
+            <div class="mt-4">
+              <h4>📋 Papan Pemantauan Laporan Warga Terkini:</h4>
+              <div class="table-scroll-mini">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>ID Tiket</th>
+                      <th>Wilayah</th>
+                      <th>Jenis Masalah</th>
+                      <th>Status Penanganan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>#LAP-001</code></td>
+                      <td>Kec. Sukamaju, RT 04</td>
+                      <td>Air Keruh & Berbau Besi</td>
+                      <td><span class="tag-status tag-warn">Sedang Diproses</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>#LAP-002</code></td>
+                      <td>Kel. Melati Berseri, Blok C</td>
+                      <td>Saluran Tersumbat Minyak</td>
+                      <td><span class="tag-status tag-safe">Selesai Ditangani</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>#LAP-003</code></td>
+                      <td>Desa Karanganyar, Dusun 3</td>
+                      <td>Sumur Kering saat Kemarau</td>
+                      <td><span class="tag-status tag-danger">Menunggu Bantuan</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- FUNGSIONAL 11: Menampilkan Informasi dan Saran Bagi Pemerintah dan Masyarakat -->
+          <div class="info-card">
+            <div class="card-badge-row">
+              <span class="pill-badge">Fungsional 11</span>
+              <span class="pill-badge-outline">Sinergi Bersama</span>
+            </div>
+            <h3>2. Saran Strategis Bagi Pemerintah & Masyarakat</h3>
+            <p class="card-intro">
+              Menjaga kelestarian air dan sanitasi adalah tanggung jawab bersama antara penentu kebijakan dan warga masyarakat:
+            </p>
+
+            <!-- Kolom Pemerintah -->
+            <div class="policy-box gov-policy">
+              <div class="policy-header">
+                <span class="pol-icon">🏛️</span>
+                <h4>Saran & Rekomendasi Bagi Pemerintah:</h4>
+              </div>
+              <ul class="policy-list">
+                <li><strong>Perluasan Jaringan PDAM:</strong> Memperluas pipa air bersih ke permukiman padat untuk mengurangi penyedotan air tanah berlebihan.</li>
+                <li><strong>Pengawasan Baku Mutu & Septic Tank:</strong> Melakukan uji berkala kualitas air minum serta mewajibkan sertifikat tangki septik kedap air pada izin bangunan rumah (PBG).</li>
+                <li><strong>Bantuan Saat Kemarau:</strong> Menyediakan subsidi tandon air komunal dan dropping mobil tangki air bersih bagi desa yang rawan kekeringan.</li>
+              </ul>
+            </div>
+
+            <!-- Kolom Masyarakat -->
+            <div class="policy-box cit-policy mt-3">
+              <div class="policy-header">
+                <span class="pol-icon">🤝</span>
+                <h4>Peran Aktif & Saran Bagi Masyarakat:</h4>
+              </div>
+              <ul class="policy-list">
+                <li><strong>Penerapan Hidup Bersih:</strong> Menjaga jarak bibir sumur minimal 10–15 meter dari septic tank dan selalu merebus air hingga 100°C sebelum diminum.</li>
+                <li><strong>Kelola Minyak & Sampah:</strong> Jangan buang minyak jelantah bekas ke wastafel dan rutin gotong royong membersihkan selokan dari sampah plastik.</li>
+                <li><strong>Hemat & Buat Resapan:</strong> Mematikan kran air saat tidak dipakai serta membuat lubang biopori di pekarangan rumah untuk tabungan air tanah.</li>
+              </ul>
+            </div>
+
+            <!-- FUNGSIONAL 13: Admin Pengelolaan Konten Dilakukan Langsung pada Berkas Data Website -->
+            <div class="admin-guide-card mt-4" id="kelola-data">
+              <div class="admin-guide-header">
+                <span class="pol-icon">⚙️</span>
+                <div>
+                  <span class="pill-badge">Fungsional 13</span>
+                  <h4>Panduan Pengelolaan Berkas Data Website untuk Admin</h4>
+                </div>
+              </div>
+              <p class="admin-text">
+                Sesuai ketentuan Fungsional 13: <em>"Admin dapat mengelola konten dan meninjau laporan; pengelolaan dilakukan langsung pada berkas data website."</em>
+              </p>
+              <div class="admin-steps-box">
+                <p><strong>Cara Mudah Memperbarui Konten Website (Tanpa Database/Server):</strong></p>
+                <ol>
+                  <li>Buka berkas <code>index.html</code> menggunakan teks editor apa saja (seperti Notepad, VS Code, atau TextEdit).</li>
+                  <li>Untuk memperbarui tips atau informasi baru, cari bagian <code>&lt;!-- FUNGSIONAL 4 --&gt;</code> atau tabel laporan warga, lalu ubah teksnya sesuai data terkini.</li>
+                  <li>Simpan berkas (<em>Save</em> / <code>Ctrl + S</code>). Halaman website akan langsung terbarui secara otomatis saat dibuka di browser!</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       7. FOOTER SEDERHANA & RAMAH PEMULA
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div class="footer-info">
+        <div class="footer-brand">
+          <span class="brand-icon">💧</span>
+          <span class="brand-text">AirKita</span>
+        </div>
+        <p class="footer-desc">
+          Website edukasi statis sederhana untuk belajar menjaga kualitas air bersih, kesehatan sanitasi, dan kelestarian lingkungan keluarga.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h5>Pintasan Cepat:</h5>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#uji-air">Uji Kualitas Air & pH</a></li>
+          <li><a href="#edukasi">Materi Edukasi & Sanitasi</a></li>
+          <li><a href="#solusi-biaya">Solusi Saringan & Biaya</a></li>
+          <li><a href="#laporan-saran">Laporan Masalah Air</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal-col">
+        <h5>Standar Rujukan:</h5>
+        <p>Permenkes RI No. 2 Tahun 2023 tentang Standar Baku Mutu Kesehatan Lingkungan untuk Media Air.</p>
+        <p class="mt-2"><strong>Dibuat dengan:</strong> 100% HTML5 & Vanilla CSS Murni (Ringan, Cepat & Tanpa Javascript/JSON).</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-line">
+      <div class="container">
+        <p>&copy; 2026 AirKita - Edukasi Air Bersih & Sanitasi Sehat. Terbuka untuk pembelajaran umum.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
