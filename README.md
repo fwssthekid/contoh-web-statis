@@ -1,6 +1,6 @@
 # AirKita - Website Edukasi Air Bersih & Sanitasi Sehat
 
-Website statis edukasi sederhana, elegan, dan profesional yang dibuat murni menggunakan **HTML5** dan **CSS3 (Vanilla CSS)** tanpa ketergantungan JavaScript atau JSON.
+Website statis edukasi sederhana, elegan, dan profesional yang dibuat murni menggunakan **HTML5** dan **CSS3 (Vanilla CSS)** 
 
 ---
 
